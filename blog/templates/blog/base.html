@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+
+<html>
+    <head>
+        <title>Hi I'm Deva</title>
+        <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/touchTouch.css' %}">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+    <body class="index-1">
+    <!--==============================header=================================-->
+    <header id="header">
+    	<div id="stuck_container">
+    		<div class="container">
+    			<div class="row">
+    				<div class="grid_12">
+    					<div class="social">
+    						<a href="#"><span class="bd-ra fa fa-facebook"></span></a>
+    						<a href="#"><span class="bd-ra fa fa-tumblr"></span></a>
+    						<a href="#"><span class="bd-ra fa fa-google-plus"></span></a>
+    					</div>
+    					<h1><a href="{% url 'post_list'%}">Hi I'm Deva</a></h1>
+    					<nav>
+    						<ul class="sf-menu">
+    							<li class="current"><a href="{% url 'post_list'%}">Home</a>
+
+    							</li>
+                  {% if user.is_authenticated %}
+                      <li><a href="{% url 'post_new' %}" class="top-menu">Post</a></li>
+                      <li><a href="{% url 'post_draft_list' %}" class="top-menu">View</span></a></li>
+                      <li><a href="{% url 'post_new' %}" class="top-menu">Login</a></li>
+                  {% endif %}
+    						</ul>
+    					</nav>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </header>
+
+        <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
