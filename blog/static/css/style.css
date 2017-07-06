@@ -9,7 +9,7 @@
 										Main layout styles
 =========================================================*/
 body {
-  background: #f6f6f7;
+  background-color :#d94d3a;
   font: 14px/24px Georgia, 'Times New Roman', Times, serif;
 }
 a {
@@ -1256,7 +1256,7 @@ p {
   }
 }
 /*========================================================
-								RESPONSIVE LAYOUTS STYLES 
+								RESPONSIVE LAYOUTS STYLES
 =========================================================*/
 @media only screen and (max-width: 1199px) {
   .sample {

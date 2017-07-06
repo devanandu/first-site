@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     </head>
-    <body class="index-1">
+    <body class="index-1"style="background-color:#000000">
     <!--==============================header=================================-->
     <header id="header">
     	<div id="stuck_container">
@@ -32,9 +32,10 @@
                   {% if user.is_authenticated %}
                       <li><a href="{% url 'post_new' %}" class="top-menu">Post</a></li>
                       <li><a href="{% url 'post_draft_list' %}" class="top-menu">View</span></a></li>
-                  {% endif %}
-                  <li><a href="{% url 'admin:index' %}" class="top-menu">Login</a></li>
-
+                      <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                  {% else %}
+                  <li><a href="{% url 'login' %}" class="top-menu">Login</a></li>
+{% endif %}
     						</ul>
     					</nav>
     				</div>
@@ -43,7 +44,7 @@
     	</div>
     </header>
 
-        <div class="content container">
+        <div class="content container" background-color="#ffffff">
     <div class="row">
         <div class="col-md-8">
             {% block content %}

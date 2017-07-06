@@ -16,7 +16,7 @@
             <div class="img_block"><a href="{{ post.model_pic.url }}"><img src="{{ post.model_pic.url }}" alt="Services"><i>+</i></a></div>
             <article>
               <h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
-              <div class="post">
+              <div class="post" style="background-color:#000000">
                   <div class="date">
                       <p>published: {{ post.published_date }}</p>
                   </div>
